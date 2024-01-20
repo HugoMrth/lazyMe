@@ -1,0 +1,44 @@
+IC_med                  Intervalle de confiance de la mediane
+IC_med_binom            Intervalle de confiance de la mediane par la
+                        loi binomiale
+IC_moy                  Intervalle de confiance de la moyenne
+IC_tab                  Intervalle de confiance d'un tri a plat
+SIR                     Standardized Infection Ratio (SIR)
+arrondi                 Arrondi au sens mathematique
+create_path             Creation rapide d'un chemin
+get_script_path         Chemins vers le script actif
+install.packages.cespa.3.3
+                        Fonctions install.packages() parametrees pour
+                        le CESPA
+install.tab             Fonction d'installation du package tab
+is.defined              Inverse de is.null()
+isnt.na                 Inverse de is.na()
+load_libraries.na       Chargement de packages
+mean_trunc              Moyenne tronquee
+not.in                  Inverse de in
+oldw                    Nombre de warnings()
+paste_date              Construit un vecteur de dates
+relevel_factor          Gestion simple des facteurs
+rescale_norm            Normalisation d'un vecteur
+reset_env               Supprime les variables dans l'environnement
+round_to_str            Ecriture scientifique de l'arrondi d'un nombre
+scatter_linked          Nuages de points "en colonnes" relies
+spread2                 Fonction 'spread()' du package 'tidyr'
+                        amelioree
+str_as_function         Execution d'une fonction sous forme de chaine
+                        de caracteres.
+str_clean               Normalise une chaine de caracteres
+summary_glm             Summary presonnalise pour une regression
+                        binomiale
+tab_bi_multi            Tableau bivarie et multivarie
+tab_contingence         Tableau de contingence sur un data frame
+tab_contingence_map_fun
+                        Tableau de contingence
+table_mult              Tri a plat de plusieurs variables
+test_binom_med          Intervalle de confiance de la moyenne et test
+                        binomial sur la mediane
+tri_a_plat              Tris a plat sur un data frame
+tri_a_plat_map_fun      Tri a plat
+tri_croise              Tris croises sur un data frame
+tri_croise_map_fun      Tri croise
+useFull-package         Un package vraiment sympa
