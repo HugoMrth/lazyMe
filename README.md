@@ -5,7 +5,7 @@
   
 ***
 
- ### 1) Installation
+ ### 1) Install
 
 ```
 #Install from CRAN 
