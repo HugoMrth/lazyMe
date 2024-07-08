@@ -36,10 +36,10 @@
 }
 
 \seealso{
-  Autres packages developpes au CESPA :
+  Other packages from the same author :
 
-  \code{\link{epiplus}}, \code{\link{MDBprod}}, \code{\link{manageR}},
-  \code{\link{surveyscores}}, \code{\link{NSN}}
+  \code{\link{epiplus}}, \code{\link{dataDesc}}, \code{\link{manageR}},
+  \code{\link{surveyscores}}, \code{\link{sampleSize}}
 }
 
 \examples{
