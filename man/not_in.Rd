@@ -1,20 +1,18 @@
 \title{
-  Inverse de in
+  Opposite of %in%
 }\name{not_in}\alias{not.in}\description{
-  Compile \code{!(x in y)}. \cr
-  Détecte les éléments de x qui ne sont pas dans y.
 }\usage{
   not.in(x, y)
   x %ni% y
 }\arguments{
   \item{x}{
-    Un vecteur de valeurs.
+    A vector of values
 }
   \item{y}{
-    Un vecteur de valeurs.
+    A vector of values
 }
 }\value{
-  Un vecteur de booléens de la même longueur que x.
+A boolean vector the same length as x
 }\author{
   Joffrey Marchi
 }\examples{
