@@ -5,7 +5,7 @@
 \description{
   Recode une variable en se basant sur le codage present dans un dictionnaire de donnees.
 }\usage{
-  recode_from_codebook(data, dictionnary, varname,
+  recode_from_codebook(data, codebook, varname,
                           id.var, id.old, id.new,
                           type = c("QCU", "QCM"),
                           multi.label = c("oui", "label"))
@@ -13,7 +13,7 @@
   \item{data}{
     Le jeu de donnees
 }
-  \item{dictionnary}{
+  \item{codebook}{
     Le dictionnaire de donnees
 }
   \item{varname}{
