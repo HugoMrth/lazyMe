@@ -1,25 +1,27 @@
 \title{
-  Arrondi au sens mathematique
-}\name{arrondi}\alias{arrondi}\description{
-  Fourni l'arrondi mathematique : 0.5 n'est pas arrondi a 0 mais bien a 1.
+Mathematical rounding
+}\name{arrondi}
+\alias{arrondi}
+\description{
+Matheamtical rounding of numbers, 0.5 is rounded down to 0 instead of up to 1.
 }\usage{
 arrondi(x, digits = 0)
 }\arguments{
   \item{x}{
-    Un nombre, vecteur ou matrice numerique.
+Any kind of numerical object.
 }
   \item{digits}{
-    Le nombre de chiffres apres la virgule voulu.
+Number of decimal digits, default is 0. 
 }
 }\value{
-  Le x en entrée arrondi.
+
 }\author{
   Joffrey Marchi
 }\examples{
-## Difference avec le round()
+## Comparison with round()
 arrondi(0.5)
 round(0.5)
 
-## Application à une matrice
+## Matrix example
 arrondi(matrix(1:10/7, nrow = 5), digits = 3)
 }
