@@ -2,7 +2,7 @@ nb.decimal <- function(double) {
 
   #### Check Params ####
   if(is.null(double)){
-    stop("double manquant")
+    stop("double missing")
   }
 
   if (!is.numeric(double)) {
