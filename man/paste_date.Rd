@@ -2,11 +2,11 @@
 \alias{paste_date}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-  Construit un vecteur de dates
+Dates construction from spread up columns of a data.frame
 }
 \description{
-  Construit un vecteur de dates à partir de colonnes éclatées dans un data frame.
-  Concatène les colonnes renseignées et les compile sous format date/dateTime. \cr
+Construct a date vector from spread up date element in a date frame.
+Pastes the columns together and convert the character string in a Date object.
 }
 \usage{
   paste_date(data,
@@ -17,40 +17,38 @@
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{data}{
-    Un data frame de données.
+    Data frame to work on.
 }
   \item{year}{
-    Colonne Année : un entier correspondant au numéro de colonne ou le nom de la colonne. Obligatoire.
+Year column : must be an integer.
 }
   \item{month}{
-    Colonne Mois. Les valeurs manquantes sont gérées mais induisent des valeurs manquantes dans le vecteur de sortie.
+Month column. Missing values are supported, but will be missing in the output vector.
 }
   \item{day}{
-    Colonne Jour. Les valeurs manquantes sont gérées et peuvent être remplacé.
+Day column. Missing values are supported and can be replaced.
 }
   \item{hour}{
-    Colonne Heure.
+    Hours
 }
   \item{minute}{
-    Colonne Minute.
-}
+    Minutes
   \item{second}{
-    Colonne Seconde.
+    Seconds
 }
   \item{replace.na}{
-    Choix de remplacer ou non les valeurs manquantes. Ne fonctionne pas sur les colonnes d'année ou de mois.
-    Les heures, minutes et seconde sont remplacées par la valeur 1. Par défaut \code{replace.na = TRUE}.
+Whether or not to replace missing values. Does not work with years and month.
+If \code{replace.na = TRUE} (default), missing values are replace with 1.
 }
   \item{replace.day}{
-    Choix de remplacer les données de jour manquantes par le 1er ou le 15 du mois. Inutile si \code{replace.na = FALSE}.
-    Par défaut \code{replace.day = "15"}.
+Bypasses the default setting replacing missing days with 1. If \code{replace.day = "15"}, missing days will be imputed with 15 instead.
 }
 }
 \details{
 %%  ~~ If necessary, more details than the description above ~~
 }
 \value{
-  Un vecteur de classe Date si les heures, minutes et secondes ne sont pas renseignées. Au format dateTime sinon.
+  Date vector if hour, minutes and seconds are missing. Datatime vector otherwise.
 }
 \references{
 %% ~put references to the literature/web site here ~
@@ -68,7 +66,7 @@
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
-# Création d'un dataframe
+# Data
 data <- cbind(c(rep(2012, 5), NA, rep(2013, 4)),
               c(NA, 2:10),
               c(10:18, NA),
@@ -76,14 +74,12 @@ data <- cbind(c(rep(2012, 5), NA, rep(2013, 4)),
 colnames(data) <- c("Annee", "Mois", "Jour", "Heure")
 data
 
-# Cet appel ne fonctionne pas car l'argument année est nécessaire
+# Not working : Year missing
 paste_date(data, month = 2)
-# Celui ci oui
+# Working
 paste_date(data, year = 1, month = "Mois")
 
-# Avec ou sans replace.na
-# Le dernier élément du vecteur jour est NA et remplacé par 15
-# Le 5eme élément du vecteur heure est NA et remplacé par 1
+# replace.na
 paste_date(data, year = 1, month = 2, day = 3, hour = 4)
 paste_date(data, year = 1, month = 2, day = 3, hour = 4, replace.na = FALSE)
 }
