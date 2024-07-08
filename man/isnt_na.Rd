@@ -1,17 +1,17 @@
 \title{
-  Inverse de is.na()
+Opposite of is.na()
 }\name{isnt_na}\alias{
   isnt.na
 }\description{
-  Compile \code{!is.na(x)}. \cr
+
 }\usage{
   isnt.na(x)
 }\arguments{
   \item{x}{
-    Un vecteur de valeurs.
+An object to be tested.
 }
 }\value{
-  Un vecteur de booléens de la même longueur que x.
+  A boolean
 }\author{
   Hugo Marthinet
 }\examples{
