@@ -1,5 +1,5 @@
 \title{
-  The opposite of the is.null() test
+  Opposite of is.null() 
 }
 \name{is.defined}
 \alias{is.defined}
@@ -9,7 +9,7 @@
   is.defined(x)
 }\arguments{
   \item{x}{
-    Any object
+An object to be tested.
 }
 }\value{
   A boolean
