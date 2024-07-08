@@ -8,7 +8,7 @@ recode_from_dictionnary <- function(data, dictionnary, varname,
     #### Check Params ####
 
     if(is.null(fac)){
-      stop("fac manquant")
+      stop("fac missing")
     }
 
     #### Code Fonction ####
