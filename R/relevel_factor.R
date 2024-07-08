@@ -3,7 +3,7 @@ relevel_factor <- function(fac, new.levels = NULL, ref = NULL) {
   #### Check Params ####
 
   if(is.null(fac)){
-    stop("fac manquant")
+    stop("fac missing")
   }
 
   #### Code Fonction ####
