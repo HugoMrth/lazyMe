@@ -1,18 +1,18 @@
 \title{
-  Inverse de is.null()
+  The opposite of the is.null() test
 }
 \name{is.defined}
 \alias{is.defined}
 \description{
-  Retourne l'inverse de \code{is.null()}
+
 }\usage{
   is.defined(x)
 }\arguments{
   \item{x}{
-    Un objet (qui peut être \code{null})
+    Any object
 }
 }\value{
-  Un booléen
+  A boolean
 }\author{
   Joffrey Marchi
 }\examples{
