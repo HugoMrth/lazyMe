@@ -6,11 +6,11 @@ paste_date <- function(data,
 
   #### Check Params ####
   if(is.null(data)){
-    stop("data manquant")
+    stop("data missing")
   }
 
   if(is.null(year)){
-    stop("Au moins la colonne d'année doit être renseignée")
+    stop("year missing")
   }
 
   #### Code Fonction ####
