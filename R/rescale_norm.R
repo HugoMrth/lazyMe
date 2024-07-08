@@ -2,7 +2,7 @@ rescale_norm <- function(x) {
   #### Check Params ####
 
   if(is.null(x)){
-    stop("x manquant")
+    stop("x missing")
   }
 
   #### Code Fonction ####
