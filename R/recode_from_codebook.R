@@ -1,4 +1,4 @@
-recode_from_dictionnary <- function(data, dictionnary, varname,
+recode_from_codebook <- function(data, codebook, varname,
                                     id.var, id.old, id.new,
                                     type = c("QCU", "QCM"),
                                     multi.label = c("oui", "label")) {
@@ -62,7 +62,7 @@ recode_from_dictionnary <- function(data, dictionnary, varname,
 
   #### Code fonction ####
   res <- as.factor(data[, varname])
-  df_recode <- dictionnary[dictionnary[, id.var] == varname, c(id.old, id.new)]
+  df_recode <- codebook[codebook[, id.var] == varname, c(id.old, id.new)]
 
   if (type == "QCU") {
     res <- relevel_factor(res, new.levels = df_recode)
@@ -83,9 +83,9 @@ head(iris)
                    Label = c(NA, NA, NA, NA, "1", "2", "3")))
 
 
-recode_from_dictionnary(iris, dic_iris, "Species",
+recode_from_codebook(iris, dic_iris, "Species",
                         "Variable", "Code", "Label",
                         type = "QCU")
-recode_from_dictionnary(iris, dic_iris, "Species",
+recode_from_codebook(iris, dic_iris, "Species",
                         1, 2, 3,
                         type = "QCU")
