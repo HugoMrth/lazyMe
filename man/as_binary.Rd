@@ -1,5 +1,5 @@
 \title{
-  Convertion of a vector to a binary
+  Conversion of a vector to a binary
 }\name{as.binary}\alias{as.binary}\description{
 Convert and format a vector into a binary variable.
 }\usage{
