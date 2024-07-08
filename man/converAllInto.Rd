@@ -1,24 +1,23 @@
 \title{
-  Conversion de variable dans un data.frame
+  Conversion of columns type in a data.frame
 }\name{convertAllInto}\alias{convertAllInto}\description{
-  Converti toutes les colonnes d'un type donne dans un data frame dans un autre type.
+Convert every columns of a given type in a data frame to another one.
 }\usage{
 convertAllInto(data, type, converInto)
 }\arguments{
   \item{data}{
-    Le jeu de donnees.
+    The data frame
 }
   \item{type}{
-    Le type des colonnes a convertir. Voir les \code{Details} pour les types de variables supportes.
+Type of the columns to convert. See \code{Details} for supported types.
 }
   \item{converInto}{
-    Le type dans lequel la conversion doit etre faite.
+Type to convert the columns into.
 }
 }\details{
-  Les types supportés sont :
+  Supported type are :
     \code{integer}, \code{character}, \code{factor} et \code{numeric}.
 }\value{
-  Retourne le meme jeu de donnees avec les colonnes converties.
 }\author{
   Hugo Marthinet
 }\examples{
