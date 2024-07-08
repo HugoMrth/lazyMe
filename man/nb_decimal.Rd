@@ -2,11 +2,10 @@
 \alias{nb.decimal}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-  Retourne le nombre de chiffre après la virgule d'un réel.
+  Number of decimal digits of a numeric
 }
 \description{
-  Retourne le nombre de chiffre après la virgule d'un réel.
-  Exclu les 0 en trop.
+Compute the number of decimal digits of a numeric, exlucding the excess zeroes.
 }
 \usage{
   nb.decimal(double)
@@ -14,14 +13,14 @@
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{double}{
-    Un réel.
+    A numeric.
 }
 }
 \details{
 %%  ~~ If necessary, more details than the description above ~~
 }
 \value{
-    Un entier.
+An integer
 }
 \references{
 %% ~put references to the literature/web site here ~
