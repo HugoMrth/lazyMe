@@ -1,7 +1,7 @@
 \title{
-  Binarisation
+  Convertion of a vector to a binary
 }\name{as.binary}\alias{as.binary}\description{
-  Converti une variable a deux modalites en variable binaire.
+Convert and format a vector into a binary variable.
 }\usage{
   as.binary(x,
             true.val = 1,
@@ -11,29 +11,28 @@
             lang = "fr")
 }\arguments{
   \item{x}{
-    Vecteur de donnees.
+    Vector to convert.
 }
   \item{true.val}{
-    Modalite de la valeur positive.
+    Value conrseponding to the true value in the conversion.
 }
 \item{na.ignore}{
-    Choix de considerer ou les \code{NA} comme des valeurs negatives. Pas defaut \code{na.ignore = TRUE}
-    et les valeurs manquantes seront remplacees.
+Whether to ignore the \code{NA} or to include them as negative values. 
+Default is \code{na.ignore = TRUE} and missing values will be replaced.
 }
 \item{values}{
-    Type de variable en sortie. Les trois options sont :
-    \code{"logical"} (defaut) pour une sortie en format logique booleen,
-    \code{"factor"} pour une variable facteur Oui-Non,
-    \code{"numeric"} pour une variable numerique 1-0.
+Type of the output variable. Possible options are :
+\code{"logical"} (default) for a boolean,
+\code{"factor"} for a Yes/No factor and
+\code{"numeric"} for a 1/0 numeric.
 }
 \item{ref}{
-    Utilise seulement si \code{values = "factor"}. Choix de la modalite de reference du facteur.
-    Peut prendre les valeurs \code{"neg"} (defaut) pour prendre la modalite negtaive comme reference,
-    ou \code{"pos"} pour la modalite positive.
+Only used if \code{values = "factor"}. Choice for the reference category if converted to a factor.
+Default is \code{"neg"} and the negative factor will be used as the reference, other option is \code{"pos"}.
 }
 \item{lang}{
-    Utilise seulement si \code{values = "factor"}. Choix du language des modalites.
-    Peut prendre les valeurs \code{"fr"} (defaut) ou \code{"en"}.
+Only used if \code{values = "factor"}. Language in which to translate the output factor. Default is \code{"fr"} 
+for french, can also be \code{"en"} for english.
 }
 }
 \author{
