@@ -2,7 +2,7 @@ mean_trunc <- function(X, q = 0.95, sides = c("two.sided", "left", "right")) {
 
   #### Check Params ####
   if(is.null(X)){
-    stop("X manquant")
+    stop("X missing")
   }
   if(!is.vector(X)){
     X <- as.numeric(as.character(X))
