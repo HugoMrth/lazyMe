@@ -1,4 +1,4 @@
-convertAllInto <- function(data, type, converInto) {
+convertAll <- function(data, type, converInto) {
   match.arg(type,
             choices = c("integer", "character", "factor", "numeric"))
 
@@ -34,7 +34,7 @@ convertAllInto <- function(data, type, converInto) {
   }
 }
 
-# convertAllInto(iris, "factor", "numeric")
-# convertAllInto(iris, "numeric", "character")
-# convertAllInto(iris, "factor", "factor")
-# convertAllInto(iris, "factorrrrr", "factor")
+# convertAll(iris, "factor", "numeric")
+# convertAll(iris, "numeric", "character")
+# convertAll(iris, "factor", "factor")
+# convertAll(iris, "factorrrrr", "factor")
