@@ -1,6 +1,6 @@
 export(arrondi)
 export(as.binary)
-export(convertAllInto)
+export(convertAll)
 export(is.defined)
 export(isnt.na)
 export(mean_trunc)
