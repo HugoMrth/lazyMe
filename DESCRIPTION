@@ -3,18 +3,12 @@ Type: Package
 Title: lazyMe
 Version: 0.1.1
 Authors@R: c(
-    person("Hugo", "Marthinet", email = "h.marthinet@gmail.com", role = "cre"),
-    person("Joffrey", "Marchi", email = "joffrey.marchi.cespa@gmail.com", role = "aut"),
-    person("Bakridine", "Mmadi Mrenda", email = "mmadi.cespa@gmail.com", role = "aut"))
+    person("Hugo", "Marthinet", email = "h.marthinet@gmail.com", role = "cre")
 Maintainer: Hugo Marthinet <h.marthinet@gmail.com>
-Description: Ensemble de traitements fonctions regulierement utilisees dans notre usage de R 
-  (code, transformation de donnees, acces aux variables R...), 
-  mises sous formes de package afin de garantir un acces pratique.
+Description: Personnal coding shortcuts of a lazy data scientist
 License: --------
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.1
 Imports: DescTools, dplyr, stringi, stringr, lubridate, pander, tidyr, tools, manageR
-Author: Hugo Marthinet [cre],
-  Joffrey Marchi [aut],
-  Bakridine Mmadi Mrenda [aut]
+Author: Hugo Marthinet [cre]
