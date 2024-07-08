@@ -3,15 +3,15 @@ spread_mult <- function(df, key, value) {
   #### Check Params ####
 
   if(is.null(df)){
-    stop("df manquant")
+    stop("df missing")
   }
 
   if(is.null(key)){
-    stop("key manquant")
+    stop("key missing")
   }
 
   if(is.null(value)){
-    stop("value manquant")
+    stop("value missing")
   }
 
 
