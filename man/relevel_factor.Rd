@@ -1,48 +1,44 @@
 \title{
-  Gestion simple des facteurs
+  Factor conversion and re-leveling
 }\name{relevel_factor}\alias{relevel_factor}\description{
-  Combine la fonction \code{factor()} avec une approche d'association des anciennes et nouvelles modalités
-  deux par deux par une liste, ainsi que la fonction \code{relevel} afin de définir une fonction de référence. \cr
-
-  La modalité de référence est fixée par défaut à la modalité la plus fréquente, et non pas la première à apparaître,
-  ou la première par ordre alphabétique.
+Combines the \code{factor} and \code{relevel} function into one. Association between old and new levels
+is handles trough a two by two lists matching. The default reference category is set as the most common one
+instead of the base method in R being the alphabetical order.
 }\usage{
   relevel_factor(fac, new.levels = list(), ref = NULL)
 }\arguments{
   \item{fac}{
-    Un vecteur de chaînes de caractères ou de facteurs.
+    String or factor vector.
 }
   \item{new.levels}{
-    Une liste dont les noms des éléments les valeurs des anciennes modalités, et les valeurs, les noms des nouvelles modalités.
-    Ou un datframe/une matrice dont la premiere colonne correspond aux ancienne modalites, et la deuxieme aux nouvelles.
-    Par défaut, les modalités sont inchangées.
+A list where each element is named after the old values of the vector levels, and the values are the new values to be attributed instead.
+Can also be a two columns data.frame where the first column correponds to the old levels, and the second one to the new levels.
+By default, levels are unchanged.
 }
   \item{ref}{
-    La (nouvelle) modalité de référence. Par défaut \code{ref = NULL} et la modalité
-    de référence sera la plus fréquente.
+The reference category to set. By default, the most represented category will be used.
 }
 }\value{
-  Un objet de type facteur.
+  A factor vector.
 }\author{
   Hugo Marthinet
 }\seealso{
   \code{\link{factor}}, \code{\link{relevel}}
 }\examples{
-## Dataset tabdata du package tab
+## Using tabdata form tab
 library(tab)
 
-# Par défaut, "Blanc" sera le facteur de référence
-# Car c'est le plus fréquent
+# "Blanc" as the ref
 table(tabdata$Race)
 relevel_factor(fac = tabdata$Race,
                new.levels = list("White" = "Blanc", "Black" = "Noir", "Mexican American" = "Hispanique", "Other" = "Autre"))
 
-# Mais on peut le changer
+# Changing the ref
 relevel_factor(fac = tabdata$Race,
                new.levels = list("White" = "Blanc", "Black" = "Noir", "Mexican American" = "Hispanique", "Other" = "Autre"),
                ref = "Autre")
 
-# Ou utiliser un dataframe ou une matrice
+# Alternative use
 relevel_factor(fac = tabdata$Race,
                new.levels = cbind(c("White", "Black", "Mexican American", "Other"),
                                   c("Blanc", "Noir", "Hispanique", "Autre"))
