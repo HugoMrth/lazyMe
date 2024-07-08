@@ -1,12 +1,15 @@
 \title{
   Conversion of columns type in a data.frame
-}\name{convertAllInto}\alias{convertAllInto}\description{
+}
+\name{convertAll}
+\alias{convertAll}
+\description{
 Convert every columns of a given type in a data frame to another one.
 }\usage{
-convertAllInto(data, type, converInto)
+convertAll(data, type, converInto)
 }\arguments{
   \item{data}{
-    The data frame
+    The data frame.
 }
   \item{type}{
 Type of the columns to convert. See \code{Details} for supported types.
@@ -22,6 +25,6 @@ Type to convert the columns into.
   Hugo Marthinet
 }\examples{
 head(iris)
-convertAllInto(iris, "factor", "numeric")
-convertAllInto(iris, "numeric", "character")
+convertAll(iris, "factor", "numeric")
+convertAll(iris, "numeric", "character")
 }
