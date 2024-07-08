@@ -10,9 +10,7 @@
 }
 
 \description{
-  Ensemble de traitements fonctions regulierement utilisees dans notre usage de R
-  (code, transformation de donnees, acces aux variables R...),
-  mises sous formes de package afin de garantir un acces pratique.
+  Personnal coding shorcuts of a lazy data scientist.
 }
 
 \details{
@@ -20,7 +18,7 @@
     Package: \tab  lazyMe \cr
     Type: \tab
     Package\cr
-    Version: \tab  0.1.0 \cr
+    Version: \tab  0.2.0 \cr
     Date: \tab  01/10/2022 \cr
     License: \tab neant \cr
     LazyLoad: \tab yes\cr
