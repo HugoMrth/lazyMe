@@ -1,11 +1,11 @@
 \title{
   Recode une variable depuis un dictionnaire de donnees
-}\name{recode_from_dictionnary}
-\alias{recode_from_dictionnary}
+}\name{recode_from_codebook}
+\alias{recode_from_codebook}
 \description{
   Recode une variable en se basant sur le codage present dans un dictionnaire de donnees.
 }\usage{
-  recode_from_dictionnary(data, dictionnary, varname,
+  recode_from_codebook(data, dictionnary, varname,
                           id.var, id.old, id.new,
                           type = c("QCU", "QCM"),
                           multi.label = c("oui", "label"))
@@ -46,7 +46,7 @@ head(iris)
                    Label = c(NA, NA, NA, NA, "1", "2", "3")))
 
 
-recode_from_dictionnary(iris, dic_iris, "Species",
+recode_from_codebook(iris, dic_iris, "Species",
                         "Variable", "Code", "Label",
                         type = "QCU")
 }
