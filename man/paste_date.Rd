@@ -33,6 +33,7 @@ Day column. Missing values are supported and can be replaced.
 }
   \item{minute}{
     Minutes
+}
   \item{second}{
     Seconds
 }
