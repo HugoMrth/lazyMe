@@ -2,8 +2,7 @@ Package: lazyMe
 Type: Package
 Title: lazyMe
 Version: 0.1.1
-Authors@R: c(
-    person("Hugo", "Marthinet", email = "h.marthinet@gmail.com", role = "cre")
+Authors@R: person("Hugo", "Marthinet", email = "h.marthinet@gmail.com", role = "cre")
 Maintainer: Hugo Marthinet <h.marthinet@gmail.com>
 Description: Personnal coding shortcuts of a lazy data scientist
 License: --------
