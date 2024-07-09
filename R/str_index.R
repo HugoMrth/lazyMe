@@ -1,15 +1,15 @@
 str_index <- function(string,
                       pattern,
-                      mode = c("premiere", "toutes", "derniere")) {
+                      mode = c("first", "all", "last")) {
 
   #### Check Params ####
 
   if(is.null(string)){
-    stop("string manquant")
+    stop("string missing")
   }
 
   if(is.null(pattern)){
-    stop("pattern manquant")
+    stop("pattern missing")
   }
 
   str_index_intermediaire <- function(string, pattern) {
@@ -19,14 +19,14 @@ str_index <- function(string,
   #### Code Fonction ####
 
   if (length(mode) > 1) {
-    mode <- "toutes"
+    mode <- "all"
   }
 
-  ifelse(mode == "toutes",
+  ifelse(mode == "all",
          # Si tous les index sont a retouner
          return(str_index_intermediaire(string, pattern)),
          # Selection si seulement le premier ou le dernier
-         return(unlist(lapply(str_index_intermediaire(string, pattern), function(x) {x[ifelse(mode == "premiere", 1, length(x))]})))
+         return(unlist(lapply(str_index_intermediaire(string, pattern), function(x) {x[ifelse(mode == "first", 1, length(x))]})))
          )
 }
 
