@@ -2,11 +2,11 @@
 \alias{str_as_function}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-  Execution d'une fonction sous forme de chaine de caracteres.
+Execute a character string as a function
 }
 \description{
-  Prend une chaîne de caractères et l'éxecute en tant que fonction avec son argument associé.
-  Peut être utile dans certaines situation (liste de noms de fonctions par exemple).
+Allows for a character string to be compute as a function name and applied using the arguments of said function.
+Can be sued to apply several functions over an object in the same call.
 }
 \usage{
   str_as_function(func, arg)
@@ -14,17 +14,17 @@
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{f}{
-    Un nom de fonction sous forme de chaîne de caractères.
+    Vector of functions names as character strings.
 }
   \item{arg}{
-    L'argument associé.
+Argument inherited.
 }
 }
 \details{
 %%  ~~ If necessary, more details than the description above ~~
 }
 \value{
-    Retourne l'évaluation de la fonction.
+Function output
 }
 \references{
 %% ~put references to the literature/web site here ~
@@ -42,10 +42,10 @@
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
-## Exemple sans interêt
+## No point doing it this way
 str_as_function("mean", 1:15)
 
-## Celui ci peut être plus utile
+## Two calls in one
 fonctions <- c("mean", "sd")
 for (i in 1:2) {
   print(str_as_function(fonctions[i], 1:15))
