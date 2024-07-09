@@ -2,12 +2,11 @@
 \alias{str_clean}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-  Normalise une chaine de caracteres
+Character string normalisation
 }
 \description{
-  Applique successivement les fonctions \code{strini::stri_trans_general()}, \code{stringr::str_to_lower}
-  et \code{pander::trim.spaces()} à la chaîne de caractères afin de supprimer les caractères non
-  ASCII, les passer en minuscule et supprimer les espaces en début et fin de chaïne.
+Apply succesivly \code{strini::stri_trans_general()}, \code{stringr::str_to_lower} and \code{pander::trim.spaces()}
+to fully normalize a character string to prepare for textual analysing.
 }
 \usage{
   str_clean(x)
@@ -15,14 +14,14 @@
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{x}{
-    Une châine de caractères.
+    A character string.
 }
 }
 \details{
 %%  ~~ If necessary, more details than the description above ~~
 }
 \value{
-    Une chaîne de caractères normalisée.
+
 }
 \references{
 %% ~put references to the literature/web site here ~
