@@ -2,12 +2,10 @@
 \alias{round_to_str}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-  Ecriture scientifique de l'arrondi d'un nombre
+Scientific notation of a numeric
 }
 \description{
-  Retourne le numérique en entrée arrondi et sous forme de chaîne de caractère.
-  Ajoute des zéros en fin de chaîne afin qu'elles soient toutes de longueurs égales. \cr
-  Peut être très utile pour l'écriture graphique.
+Rounds and converts the numeric input into a character string. Fills up ht eright side with zeroes if needed.
 }
 \usage{
   round_to_str(x, digits = 3, n_decimal = 3)
@@ -15,20 +13,20 @@
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{x}{
-    Un objet numérique à arrondir.
+    A numeric
 }
   \item{digits}{
-    Un chiffre correspondant nombre de décimal voulues pour l'arrondi.
+Number of decimal digits to consider for the roudning.
 }
   \item{n_decimal}{
-    Un chiffre correspondant nombre de caractères voulus après la virgule.
+Number of decimal digits to display.
 }
 }
 \details{
 %%  ~~ If necessary, more details than the description above ~~
 }
 \value{
-    Une chaîne de caractères.
+A character string
 }
 \references{
 %% ~put references to the literature/web site here ~
