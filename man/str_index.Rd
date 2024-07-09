@@ -2,11 +2,10 @@
 \alias{str_index}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-  Retourne l'indice d'apparition d'un patterne.
+Index of a pattern in a string
 }
 \description{
-  Detecte l'apparition d'un patterne dans une chaine de caracteres ou un vecteur de chaines de caracteres.
-  Retourne les emplacements - en terme de numero de caractere - d'apparition des patternes detectes.
+Detects the appearance of a pattern in a string and returns the indexes of those appearances.
 }
 \usage{
   str_clean(string, pattern,
@@ -15,22 +14,21 @@
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{string}{
-    Une châine de caractères ou vecteur de class \code{string}.
+    A \code{string}.
 }
   \item{pattern}{
-    La châine de caractères donc on veut detecter la presence.
+A character string of the pattern.
 }
-  \item{pattern}{
-    Choix de retourner le/les indices de la premiere (\code{mode = "premiere"}) occurence du patterne,
-    toutes les occurences (\code{mode = "toutes"}), ou uniquement la derniere  (\code{mode = "derniere"}).
-    Par defaut, \code{mode = "toutes"}.
+  \item{mode}{
+Which appearance should be displayed. Default is \code{mode = "first"} and only the first one will be displayed in the output.
+Other options are \code{mode = "all"} to display every appearances, and \code{mode = "last"} to only display the last one.
 }
 }
 \details{
 %%  ~~ If necessary, more details than the description above ~~
 }
 \value{
-    Si \code{mode = "toutes"}, une liste de vecteurs contenant les positions, sinon, un vecteur contenant les positions.
+Either a list if \code{mode = "all"} or a vector if \code{mode = "first"} or \code{mode = "last"}.
 }
 \references{
 %% ~put references to the literature/web site here ~
