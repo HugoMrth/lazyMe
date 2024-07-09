@@ -1,22 +1,22 @@
 \title{
-  Désagrège un jeu de donnees
+Unaggregate a dataset
 }
 \name{unaggregate}
-\alias{unaggregate.na}
+\alias{unaggregate}
 \description{
-  Désagrège un jeu de données agrégé par groupe selon une varible renseignant les effectifs de chaque groupe.
-  Retourne un data frame contenant la ligne du groupe répétée autant de fois que d'invidus dans ce groupe.
+Unaggregate a daatset using a variable containing the frequency of each group/row.
+Each group wil then be copied and pasted n times, n being the value in the frequency column.
 }\usage{
   unaggregate(data, N)
 }\arguments{
   \item{data}{
-    Le jeu de données.
+    Data
 }
   \item{N}{
-    La colonne renseignant les effectifs de chaque groupe.
+    The frequency column
 }
 }\value{
-  Un data frame de dimensions sum(N)*ncol(data)-1
+A long dataset
 }\author{
   Hugo Marthinet
 }\examples{
