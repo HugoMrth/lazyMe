@@ -1,23 +1,23 @@
 \title{
-  Fonction \code{spread()} du package \code{tidyr} am?lior?e
+  Improved \code{spread()} from \code{tidyr}
 }\name{spread_mult}
 \alias{spread_mult}
 \description{
-  Permet de compiler la fonction \code{spread()} du package \code{tidyr} sur plusieurs colonnes ? la fois.
+Allows for \code{spread()} over mutliple columns at once.
 }\usage{
   spread_mult(df, key, value)
 }\arguments{
   \item{data}{
-    Le jeu de donn?es.
+    Data
 }
   \item{id}{
-    Le nom ou l'indice de la variable cl? sur laquelle effectuer le \code{spread()}.
+Name or index of the key column.
 }
   \item{value}{
-    Vecteur contenant les noms ou indices des colonnes sur lesquelles appliquer le \code{spread}.
+Vector of names or indexes of the columns on which to apply the \code{spread}
 }
 }\value{
-  Un data frame.
+
 }\author{
   Hugo Marthinet
 }\seealso{
