@@ -38,7 +38,7 @@ Day column. Missing values are supported and can be replaced.
     Seconds
 }
   \item{replace.na}{
-Whether or not to replace missing values. Does not work with years and month.
+Wether or not to replace missing values. Does not work with years and month.
 If \code{replace.na = TRUE} (default), missing values are replace with 1.
 }
   \item{replace.day}{
