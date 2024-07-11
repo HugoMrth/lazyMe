@@ -17,7 +17,7 @@ Convert and format a vector into a binary variable.
     Value conrseponding to the true value in the conversion.
 }
 \item{na.ignore}{
-Whether to ignore the \code{NA} or to include them as negative values. 
+Wether to ignore the \code{NA} or to include them as negative values. 
 Default is \code{na.ignore = TRUE} and missing values will be replaced.
 }
 \item{values}{
