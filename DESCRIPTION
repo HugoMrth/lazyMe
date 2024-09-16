@@ -11,3 +11,7 @@ LazyData: true
 RoxygenNote: 7.1.1
 Imports: DescTools, dplyr, stringi, stringr, lubridate, pander, tidyr, tools, manageR
 Author: Hugo Marthinet [cre]
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
