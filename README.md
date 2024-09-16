@@ -15,8 +15,10 @@
 #Install the development version from GitHub  
 install.packages("devtools")
 
-#Install MSProfileR
-devtools::install_github("HugoMrth/lazyMe")
+#Install package from github
+devtools::install_github("HugoMrth/lazyMe", build_vignettes = TRUE)
+#Or download the zip file
+devtools::install(build_vignettes = TRUE)
 
 #R may recquire a session restart in order to properly run the App : Ctrl + Shift + F10
 ```
