@@ -1,19 +1,93 @@
 ---
-title: "lazy_me"
-output: rmarkdown::html_vignette
+title: "<h1 style='text-align:center;'> Data handling tools </h1>"
+author: "Hugo Marthinet"
+date: "`r Sys.Date()`"
+output:
+  knitr:::html_vignette:
+  toc: true
 vignette: >
-  %\VignetteIndexEntry{lazy_me}
   %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteEncoding{UTF-8}
+  %\VignetteIndexEntry{Data handling tools}
+  %\usepackage[utf8]{inputenc}
 ---
 
-```{r, include = FALSE}
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>"
-)
+\setmainfont{Calibri Light}
+
+```{r, echo = FALSE, message = FALSE}
+
+# If you want to create a PDF document paste the following after line 9 above:
+#   pdf_document:
+#     toc: true
+#     highlight: tango
+#     number_sections: no
+#     latex_engine: xelatex    
+# header-includes: 
+#    - \usepackage{fontspec}
+
+knitr::opts_chunk$set(collapse = T, comment = "#>")
+options(tibble.print_min = 4L, tibble.print_max = 4L)
+library(lazyMe)
 ```
 
-```{r setup}
-library(lazyMe)
+This packges provides coding shortcut to handle data before strating analysing it. 
+Functions in the packages to not propose anything new, but merely grant an easy access to processes that would usualy require combination of 
+several functions. This can be anything from the inverse of element testing (**is.na()**, **is.null()**...), vector handling (character, factor...)
+or type conversion.
+
+## Element testing
+
+```{r, message = FALSE}
+# Inverse of is.na()
+x <- c(NA, NA, NA, "", NA, NA, NA, NA, "", NA, NA, NA, NA, "", NA, NA, NA, NA, "BATMAAAAAN")
+is.na(x)
+isnt.na(x)
+
+# Inverse of %in%
+x <- c("RiRi", "Fifi", "Loulou")
+y <- c("Fifi", "Brindacier")
+not.in(x, y)
+x %ni% y
+
+# Inverse of is.null()
+a <- 1
+b <- NULL
+is.defined(a)
+is.defined(b)
+```
+
+## Strings and factors
+
+```{r, message = FALSE}
+# Clean a string
+str_clean("    bONjour & au Revoir    é     ")
+
+
+# Index of pattern in a string
+A <- "Une fois trois egal trois"
+B <- "Deux fois trois egal six"
+
+str_index(A, "trois")
+str_index(A, "trois", mode = "premiere")
+
+str_index(c(A, B), "trois")
+
+
+# Relevel and set reference level of a factor
+library(tab)
+relevel_factor(fac = tabdata$Race,
+               new.levels = list("White" = "Blanc", "Black" = "Noir", "Mexican American" = "Hispanique", "Other" = "Autre"),
+               ref = "Autre")
+
+```
+
+## Type conversion
+
+```{r, message = FALSE}
+# Convert all of the columns of a given type in another one
+head(iris)
+convertAll(iris, "factor", "numeric")
+
+# Handle binary vector 
+x <- sample(c("Yes", "No", "Maybe"), 25, replace = TRUE)
+as.binary(x, true.val = "Yes")
 ```
