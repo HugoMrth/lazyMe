@@ -68,16 +68,15 @@ B <- "Deux fois trois egal six"
 
 str_index(A, "trois")
 str_index(A, "trois", mode = "premiere")
-
 str_index(c(A, B), "trois")
 
 
 # Relevel and set reference level of a factor
 library(tab)
-relevel_factor(fac = tabdata$Race,
+fac_race <- relevel_factor(fac = tabdata$Race,
                new.levels = list("White" = "Blanc", "Black" = "Noir", "Mexican American" = "Hispanique", "Other" = "Autre"),
                ref = "Autre")
-
+head(fac_race)
 ```
 
 ## Type conversion
@@ -85,7 +84,9 @@ relevel_factor(fac = tabdata$Race,
 ```{r, message = FALSE}
 # Convert all of the columns of a given type in another one
 head(iris)
-convertAll(iris, "factor", "numeric")
+iris2 <- convertAll(iris, "factor", "numeric")
+str(iris2)
+
 
 # Handle binary vector 
 x <- sample(c("Yes", "No", "Maybe"), 25, replace = TRUE)
