@@ -1,3 +1,3 @@
 nna <- function(x) {
-  sum(is.na(x)
+  sum(is.na(x))
 }
