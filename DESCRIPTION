@@ -13,5 +13,7 @@ Imports: DescTools, dplyr, stringi, stringr, lubridate, pander, tidyr, tools, ma
 Author: Hugo Marthinet [cre]
 Suggests: 
     knitr,
-    rmarkdown
+    rmarkdown,
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
 VignetteBuilder: knitr
