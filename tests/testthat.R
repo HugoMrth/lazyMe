@@ -1,4 +1,4 @@
 library(testthat)
-library(pkg)
+library(lazyMe)
 
 test_check("lazyMe")
