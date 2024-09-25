@@ -1,4 +1,4 @@
 library(testthat)
 library(pkg)
 
-test_check("manageR")
+test_check("lazyMe")
