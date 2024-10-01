@@ -1,14 +1,9 @@
 convertAll <- function(data, type, converInto) {
-  match.arg(type,
-            choices = c("integer", "character", "factor", "numeric"))
-
-  match.arg(converInto,
-            choices = c("integer", "character", "factor", "numeric"))
-
+  match.arg(type, choices = c("integer", "character", "factor", "numeric"))
+  match.arg(converInto, choices = c("integer", "character", "factor", "numeric"))
 
   if (converInto == type) {
-    message("parameters 'type' and converInto' are the same : cannot convert")
-    return()
+    stop("parameters 'type' and converInto' are the same : cannot convert")
   } else {
     fun1 <- switch (
       type,
@@ -33,8 +28,3 @@ convertAll <- function(data, type, converInto) {
     return(data)
   }
 }
-
-# convertAll(iris, "factor", "numeric")
-# convertAll(iris, "numeric", "character")
-# convertAll(iris, "factor", "factor")
-# convertAll(iris, "factorrrrr", "factor")

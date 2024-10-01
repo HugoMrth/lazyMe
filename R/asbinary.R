@@ -5,24 +5,13 @@ as.binary <- function(x,
                       ref = NULL,
                       lang = NULL) {
 
-  if (length(table(x)) != 2) {
-    warning("vector isn't binary (more than 2 values) : cannot convert")
-    return()
-  }
+  if (length(table(x)) != 2)  stop("vector isn't binary (more than 2 values) : cannot convert")
+  if (!(true.val %in% x)) stop("'true.val' not in vector values, cannot convert")
 
-  if (!(true.val %in% x)) {
-    warning("'true.val' not in vector values, cannot convert")
-    return()
-  }
-
-  if (!is.null(ref) & values != "factor")
-    message("ref is only used when : values = 'factor'")
-  if (is.null(ref))
-    ref <- "neg"
-  if (!is.null(lang) & values != "factor")
-    message("lang is only used when : values = 'factor'")
-  if (is.null(lang))
-    lang <- "fr"
+  if (!is.null(ref) & values != "factor") message("ref is only used when : values = 'factor'")
+  if (is.null(ref)) ref <- "neg"
+  if (!is.null(lang) & values != "factor") message("lang is only used when : values = 'factor'")
+  if (is.null(lang)) lang <- "fr"
 
   match.arg(values, choices = c("logical", "factor", "numeric"))
   match.arg(lang, choices = c("fr", "en"))
@@ -61,27 +50,3 @@ as.binary <- function(x,
   }
   return(res)
 }
-
-
-
-
-
-# (x1 <- sample(c("Yes", "No"), 25, replace = TRUE))
-# (x2 <- sample(c("Yes", "No", "Maybe"), 25, replace = TRUE))
-# (x3 <- sample(c("Yes", "No", NA), 25, replace = TRUE))
-#
-# # Errors
-# as.binary(x1, true.val = "Maybe")
-# as.binary(x1, true.val = "Yes", lang = "por")
-# as.binary(x1, true.val = "Yes", values = "int")
-# as.binary(x2, true.val = "Yes")
-#
-#
-# as.binary(x1, true.val = "Yes")
-# as.binary(x1, true.val = "No")
-# as.binary(x1, true.val = "Yes", values = "numeric")
-# as.binary(x1, true.val = "Yes", values = "factor")
-# as.binary(x1, true.val = "Yes", values = "factor", ref = "pos")
-# as.binary(x1, true.val = "Yes", values = "factor", lang = "en")
-# as.binary(x3, true.val = "Yes")
-# as.binary(x3, true.val = "Yes", na.ignore = FALSE)
