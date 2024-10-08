@@ -1,4 +1,6 @@
-# lazyMe
+<p align="center">
+<img src="inst/logo.png" height="200"/> 
+</p>
 
 ## Easy access to common data science functions
   
