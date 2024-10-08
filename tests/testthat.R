@@ -1,6 +1,6 @@
 library(testthat)
-library(dataDesc)
+library(lazyMe)
 
-test_check("dataDesc")
+test_check("lazyMe")
 
 # devtools::test()
