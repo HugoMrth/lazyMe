@@ -18,8 +18,8 @@ sticker(
   s_y = 1.15,                         # Y position of the image
   s_width = 1.2,                      # Width of the image
   h_fill = "#FFFFFF",                 # Background color
-  h_color = "gray15",                # Hex border color
-  p_color = "gray15",                # Package name color
+  h_color = "#242625",                # Hex border color
+  p_color = "#242625",                # Package name color
   layout = "straight",                # Text layout
   text_y = 1.2                       # Y position of the text
 )

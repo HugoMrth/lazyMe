@@ -4,8 +4,8 @@ Unaggregate a dataset
 \name{unaggregate}
 \alias{unaggregate}
 \description{
-Unaggregate a daatset using a variable containing the frequency of each group/row.
-Each group wil then be copied and pasted n times, n being the value in the frequency column.
+Unaggregate a dataset using a variable containing the frequency of each group/row.
+Each group will then be copied and pasted n times, n being the value in the frequency column.
 }\usage{
   unaggregate(data, N)
 }\arguments{

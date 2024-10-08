@@ -2,23 +2,11 @@ paste_date <- function(data,
                       year = NULL, month = NULL, day = NULL,
                       hour = NULL, minute = NULL, second = NULL,
                       replace.na = TRUE, replace.day = c("15", "01")) {
-
-
   #### Check Params ####
-  if(is.null(data)){
-    stop("data missing")
-  }
-
-  if(is.null(year)){
-    stop("year missing")
-  }
+  if(is.null(data)) stop("data missing")
+  if(is.null(year)) stop("year missing")
 
   #### Code Fonction ####
-
-  # year <- 1
-  # month <- 2
-  # day <- 4
-
   ind <- (is.defined(data[, year])) & (is.defined(as.numeric(data[, year]))) & (as.numeric(data[, year]) > 0) & (!is.na(data[, year]))
   D <- data[ind, year]
   res <- rep(NA, length(data[, year]))
@@ -38,7 +26,6 @@ paste_date <- function(data,
       D <- D[!is.na(data[ind, day])]
       ind <- ind & !is.na(data[, day])
     }
-
     data[is.na(data[, day]), day] <- match.arg(replace.day, choices = c("15", "01"), several.ok = FALSE)
     D <- paste0(D, "-", str_pad(data[ind, day], 2, pad = "0"))
   } else {
@@ -89,22 +76,5 @@ paste_date <- function(data,
     }
     res[ind] <- as.character(ymd_hms(D))
   }
-
   return(res)
 }
-
-# library(stringr)
-# library(lubridate)
-# data <- cbind(c(rep(2012, 5), NA, rep(2013, 4)),
-#               c(NA, 2:10),
-#               c(10:18, NA),
-#               c(3:6, NA, 8:12))
-#
-#
-#
-# paste_date(data, month = 2)
-# paste_date(data, 1, 2)
-#
-# paste_date(data, year = 1, month = 2, day = 4)
-# paste_date(data, year = 1, month = 2, day = 3, hour = 4)
-# paste_date(data, year = 1, month = 2, day = 3, hour = 4, replace.na = FALSE)

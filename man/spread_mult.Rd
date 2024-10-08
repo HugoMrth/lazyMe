@@ -16,8 +16,9 @@ Name or index of the key column.
   \item{value}{
 Vector of names or indexes of the columns on which to apply the \code{spread}
 }
-}\value{
-
+}\detail{
+  This is equivalent (and only calls) to using \code{pivotwider()}, but was created before
+  I knew of it and now only serves as a placeholder.
 }\author{
   Hugo Marthinet
 }\seealso{
@@ -30,5 +31,5 @@ Vector of names or indexes of the columns on which to apply the \code{spread}
 
   (data <- cbind(Ind, id, x1, x2))
 
-  data %>% spread_mult(key = id, value = c("x1", "x2"))
+  spread_mult(df = data, key = "id", value = c("x1", "x2"))
 }
