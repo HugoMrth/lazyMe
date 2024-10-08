@@ -10,7 +10,7 @@ sticker(
   subplot = "inst/image.png",
   filename = "inst/logo.png",  # Output file name
   #img = "C:/Users/MARTHINETEX/Documents/02 - Code/logo.png",     # Path to your background image
-  package = "dataDesc",                 # Package name
+  package = "lazyMe",                 # Package name
   p_size = 26,
   p_y = 1.5,
   p_x = 1,# Text size
@@ -18,8 +18,8 @@ sticker(
   s_y = 0.88,                         # Y position of the image
   s_width = 0.65,                      # Width of the image
   h_fill = "#FFFFFF",                 # Background color
-  h_color = "orange2",                # Hex border color
-  p_color = "orange2",                # Package name color
+  h_color = "darkgreen",                # Hex border color
+  p_color = "darkgreen",                # Package name color
   layout = "straight",                # Text layout
   text_y = 1.2                       # Y position of the text
-) 
+)
