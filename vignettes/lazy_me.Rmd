@@ -89,6 +89,6 @@ str(iris2)
 
 
 # Handle binary vector 
-x <- sample(c("Yes", "No", "Maybe"), 25, replace = TRUE)
+x <- sample(c("Yes", "No"), 25, replace = TRUE)
 as.binary(x, true.val = "Yes")
 ```
